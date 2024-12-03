@@ -37,3 +37,19 @@ The dataset used in this project is `Ads_CTR_Optimisation.csv`, which contains d
 - Columns represent the ads (10 ads in total).
 - Each cell contains a `1` (ad was clicked) or `0` (ad was not clicked).
 You can download the dataset from the source where it is provided, or use a similar dataset for testing the Thompson Sampling algorithm.
+
+## Code Overview
+1. Data Loading: The dataset is loaded using `pandas` into a DataFrame.
+2. Thompson Sampling Implementation:
+  - We initialize the counts of rewards (clicks and no-clicks) for each ad.
+  - For each user, we simulate the process of selecting the ad with the highest probability of being clicked using the Beta distribution.
+  - The ad is selected based on the highest sampled probability, and the reward (click or no-click) is recorded.
+3. Reward Calculation: The total reward is computed based on the sum of all clicks (1s) across all users.
+4. Ad Selection Tracking: We track which ads were selected and how often.
+
+## Running the Code
+To run the Thompson Sampling algorithm, simply execute the following:
+```bash
+python thompson_sampling.py
+```
+
