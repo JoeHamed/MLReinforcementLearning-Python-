@@ -15,7 +15,6 @@ This repository demonstrates the use of Thompson Sampling in a simulated ad-clic
 - [Code Overview](#code-overview)
 - [Results](#results)
 - [Visualizations](#visualizations)
-- [License](#license)
 
 ## Dependencies
 
@@ -47,9 +46,12 @@ You can download the dataset from the source where it is provided, or use a simi
 3. Reward Calculation: The total reward is computed based on the sum of all clicks (1s) across all users.
 4. Ad Selection Tracking: We track which ads were selected and how often.
 
-## Running the Code
-To run the Thompson Sampling algorithm, simply execute the following:
-```bash
-python thompson_sampling.py
+## Results
+After running the algorithm, the total reward (clicks) and the frequency of ad selections are displayed. The histogram shows how often each ad was selected based on the Thompson Sampling algorithm.
+```plaintext
+Total Reward: 2600
+Histogram of ad selections
+Ad 7 was selected the most (375 times), while Ad 4 was selected the most often (9131 times).
 ```
-
+## Visualizations
+A histogram is generated to visualize the number of times each ad was selected during the experiment. This helps to understand the distribution of ad selections and the effectiveness of Thompson Sampling.
